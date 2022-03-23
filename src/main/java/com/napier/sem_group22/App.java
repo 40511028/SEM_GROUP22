@@ -398,7 +398,7 @@ public class App
     public void printCity(ArrayList<City> cities)
     {
         // Print header
-        System.out.println(String.format("%-14s %-14s %-14s %-20s", "City Name", "Country Name",  "District", "Population"));
+        System.out.println(String.format("%-20s %-30s %-25s %-20s", "City Name", "Country Name",  "District", "Population"));
         // Loop over all countries in the list
         for (City cit : cities)
         {
@@ -416,7 +416,7 @@ public class App
 
         // Connect to database
         if(args.length < 1){
-            a.connect("localhost:33060", 30000);
+            a.connect("db:3306", 30000);
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }
@@ -424,13 +424,23 @@ public class App
         /**
          * ------------------------------- Issue #6 --------------------------------
          */
+        /*
         String N = "3"; //input example
         String region = "Central America";
         /** Create instance of Issue6 Class-- this will have the required methods */
-        Issue6 issue = new Issue6();
+        /*Issue6 issue = new Issue6();
         ArrayList<Country> countries = issue.getNTopPopCountriesRegion(N, a, region);
-        /** Print countries and column names */
+         /** Print countries and column names*/
+        /*
         a.printCountries(countries);
+        */
+
+        /**Create an instance of Issue18 Class -- this will have the required methods */
+        Issue18 issue18 = new Issue18();
+        ArrayList<City> cities = issue18.getIssue18(a);
+
+        /** Print countries and column names*/
+        a.printCity(cities);
 
         // Disconnect from database
         a.disconnect();
