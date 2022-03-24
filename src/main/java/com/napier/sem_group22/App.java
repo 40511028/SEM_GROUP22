@@ -390,7 +390,7 @@ public class App
     }
 
     /**
-     * ----------- pprintCity(ArrayList<Country> cities) ---------------
+     * ----------- printCity(ArrayList<Country> cities) ---------------
      *    Objective: print all the cities in the ArrayList.
      *    Parameters: ArrayList<City> cities -- list of countries to be printed
      *    Return type: VOID
