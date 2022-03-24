@@ -43,10 +43,10 @@ public class Issue18 {
             }
             return cities; // return ArrayList
         }
-        catch (Exception e) //no country found
+        catch (Exception e) //no city found
         {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get countries population");
+            System.out.println("Failed to get cities population");
             return null;
         }
     }

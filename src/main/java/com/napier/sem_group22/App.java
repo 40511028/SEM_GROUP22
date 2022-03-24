@@ -416,7 +416,7 @@ public class App
 
         // Connect to database
         if(args.length < 1){
-            a.connect("db:3306", 30000);
+            a.connect("localhost:33060", 30000);
         }else{
             a.connect(args[0], Integer.parseInt(args[1]));
         }
@@ -424,18 +424,21 @@ public class App
         /**
          * ------------------------------- Issue #6 --------------------------------
          */
-        /*
+        System.out.println("\nIssue #6 Output:\n\n");
         String N = "3"; //input example
         String region = "Central America";
         /** Create instance of Issue6 Class-- this will have the required methods */
-        /*Issue6 issue = new Issue6();
+        Issue6 issue = new Issue6();
         ArrayList<Country> countries = issue.getNTopPopCountriesRegion(N, a, region);
          /** Print countries and column names*/
-        /*
-        a.printCountries(countries);
-        */
 
+        a.printCountries(countries);
+
+        /**
+         * ------------------------------- Issue #18 -------------------------------
+         */
         /**Create an instance of Issue18 Class -- this will have the required methods */
+        System.out.println("\nIssue #18 Output:\n\n");
         Issue18 issue18 = new Issue18();
         ArrayList<City> cities = issue18.getIssue18(a);
 
