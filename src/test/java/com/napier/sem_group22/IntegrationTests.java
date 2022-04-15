@@ -173,7 +173,7 @@ public class IntegrationTests {
     @Test
     void getCitiesLargeSmallPopNullContinent()
     {
-        ArrayList<City> cities1 = issue8.getCitiesLargeSmallPop(app, "Europe");
+        ArrayList<City> cities1 = issue8.getCitiesLargeSmallPop(app, null);
 
     }
 
